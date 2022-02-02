@@ -1,0 +1,13 @@
+button{padding: 5px 15px; background:transparent; border-radius:5px; cursor:pointer; border:1px solid #ffffff;}
+
+.btn-primary{background-color:$mainBlue; border: 1px solid $mainBlue; color:$white;}
+.btn-primary:hover{background-color:$white; border:1px solid $mainBlue; color: $mainBlue; transition:all ease 0.3s;}
+
+.btn-primary-inverse{background-color:$white; border:1px solid $mainBlue; color: $mainBlue;}
+.btn-primary-inverse:hover{background-color:$mainBlue; border: 1px solid $mainBlue; color:$white; transition:all ease 0.3s;}
+
+.btn-danger{background-color:$mainRed; border: 1px solid $mainRed; color:$white;}
+.btn-danger:hover{background-color:$white; border:1px solid $mainRed; color: $mainRed; transition:all ease 0.3s;}
+
+.btn-danger-inverse{background-color:$white; border:1px solid $mainRed; color: $mainRed; transition:all ease 0.3s;}
+.btn-danger-inverse:hover{background-color:$mainRed; border: 1px solid $mainRed; color:$white; transition:all ease 0.3s;}

@@ -1,0 +1,29 @@
+
+//.Home__news{font-size:18px; font-weight:400; padding:24px 0; color:$gray111}
+
+
+.Light_Home{
+  .Home__rank{padding:36px 20px 24px; font-family:'Times New Roman'; font-size:32px; line-height:40px; font-weight:normal; transition:all ease 0.3s;}
+  .CardView__wrap{display:flex; overflow:auto;  background-color:$backColor; transition:all ease 0.3s;
+    .swiper{
+      .swiper-pagination{
+        bottom:32px;
+        .swiper-pagination-bullet{width:5px; height:5px; border-radius:50px; background-color:$grayc}
+        .swiper-pagination-bullet-active{background-color:$mainColor; box-shadow:2px 2px 5px #ff0000}
+      }
+    }
+  } 
+}
+
+.Dark_Home{
+  .Home__rank{padding:36px 20px 24px; font-family:'Times New Roman'; font-size:32px; line-height:40px; font-weight:normal; background-color:$gray222; color:#ffffff;transition:all ease 0.3s;}
+  .CardView__wrap{display:flex; overflow:auto;  background-color:#35393f; transition:all ease 0.3s;
+    .swiper{
+      .swiper-pagination{
+        bottom:32px;
+        .swiper-pagination-bullet{width:5px; height:5px; border-radius:50px; background-color:#1d1d1d}
+        .swiper-pagination-bullet-active{background-color:$mainColor; box-shadow:2px 2px 5px #ff0000}
+      }
+    }
+  }
+}

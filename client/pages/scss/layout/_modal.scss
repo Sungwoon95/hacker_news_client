@@ -1,0 +1,41 @@
+.UserModal{position: relative; bottom:0; left:0;
+  .UserModal__top--bar{display:block; position:absolute;top:0; width:100%; padding:8px 0 32px; box-sizing: border-box; left:0;
+    &::after{display:block; content:''; width:36px; height:4px; background-color: $graya; position:absolute; margin:0 auto; transform:translateX(-50%); left:50%; border-radius: 50px;}
+  }
+  .UserModal__bottom--bar{display:block; position:absolute; padding:32px 0 8px; left:0; bottom:0; box-sizing: border-box; width:100%; left:0;
+    &::after{display:block; content:''; width:135px; height:5px; background-color: $gray01; position:absolute; margin:0 auto; transform:translateX(-50%); left:50%; border-radius: 50px;}
+  }
+  position:fixed; bottom:0; left:0;
+  z-index: 99; height:600px; box-sizing: border-box;
+  padding: 0 20px;
+  width:100%; background-color: $white;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 0px -4px 16px rgba(0,0,0,0.2) ;
+  color:$gray111;
+
+  .UserModal__name{font-size: 28px; font-weight: 500; line-height: 1; padding-top: 60px; text-align: center;}
+  .UserModal__title{font-size: 10px; font-weight: 300; line-height: 16px; color:$grayb; text-align: center;}
+  .UserModal__info{padding:16px 94px 32px; display:flex; justify-content: space-between;
+    .UserModal__info--section{
+      display:flex; flex-direction: column;
+      .UserModal__info--title{font-size: 14px; line-height: 20px; color:$gray7; text-align: center;}
+      .UserModal__info--txt{font-size: 20px; line-height: 22px; color:$mainColor; text-align: center;
+        display:flex; align-items: baseline; justify-content: center;
+        .UserModal__info--txt-ago{font-size: 12px; line-height: 16px;}
+      }
+    }
+  }
+  .UserModal__about{height:168px; color:$gray7; font-size: 14px; line-height: 20px; word-break: keep-all;  border-top:1px solid $grayf;  padding-top:16px; overflow: scroll;
+
+  }
+  .UserModal__more{ padding-top: 16px;
+    .UserModal__more--option{background-color: $grayf; display:flex; padding:10px 24px; justify-content: space-between; border-radius: 8px; align-items: center;
+      .UserModal__more--option-left{display:flex; align-items: center;
+        .UserModal__more--option-title{color:$gray111; padding-left: 12px; box-sizing: border-box; font-size:14px; font-weight: 400; line-height: 20px;}
+      }
+    }
+    .UserModal__more--option + .UserModal__more--option {margin-top:8px;}
+    .material-icons{font-size: 16px;}
+  }
+}
+

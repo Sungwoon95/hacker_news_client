@@ -1,0 +1,17 @@
+.PageDetail__wrap{display:flex; overflow:auto; }
+.PageDetail{display:flex; flex-direction:column; justify-content:space-between; box-shadow:0px 0px 8px $grayd; border-radius:16px; padding:16px; font-family:"Roboto", sans-serif}
+.PageDetail+.PageDetail{margin-top:12px;}
+
+.PageDetail__info--option-fill{width:100%; height:100%;}
+.PageDetail__number{display:flex; align-items: baseline; color:$mainColor; padding-bottom: 8px;}
+.PageDetail__rank{font-size:20px; line-height: 22px; padding-right: 4px;}
+.PageDetail__time{font-size: 12px;}
+.PageDetail__title{font-size:18px; font-weight:400; border-bottom:1px solid $grayf0; padding-bottom:12px; color:$gray111}
+.PageDetail__info{display:flex; justify-content:space-between; align-items:center; padding-top:10px; font-size:12px}
+.PageDetail__info--user{display:flex; align-items:center; color:$gray7; position:relative; top:0; left:0; z-index:5;}
+.PageDetail__info--user .material-icons{font-size:16px;}
+.PageDetail__info--option{display:flex; font-weight:400; width:100%}
+.PageDetail__info--option-comment{color:$mainColor; margin-right:10px;}
+
+.vieType.eneter-done{opacity:1; transition:all ease 0.3s}
+.vieType.exit{opacity:0; transition:all ease 0.3s}

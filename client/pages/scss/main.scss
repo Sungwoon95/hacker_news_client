@@ -1,0 +1,38 @@
+// 7 - 1 Model
+// abstract -> vendor -> base -> layout -> components -> pages -> themes
+
+// abstract
+@import './abstracts/functions';
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+// vendor
+
+// base
+@import './base/reset';
+@import './base/base';
+@import './base/typography';
+
+//layout
+@import './layout/header';
+@import './layout/nav';
+@import './layout/pageview';
+@import './layout/pagedetail';
+@import './layout/cardview';
+@import './layout/modal';
+@import './layout/comment';
+@import './layout/sort';
+@import './layout/footer';
+
+//components
+@import './components/buttons';
+@import './components/form';
+@import './components/title';
+@import './components/backdrop';
+
+//pages
+@import './pages/home';
+//themes
+
+// vendor
+@import 'swiper/css';

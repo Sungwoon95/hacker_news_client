@@ -1,0 +1,37 @@
+.Light_Sort{transition: all ease 0.3s; padding:20px 20px 12px; margin-bottom: 8px; display:flex; justify-content:space-between;
+  .Sort__filter{display:flex; color:$gray;
+    .Sort__fillter--top{font-size:14px; line-height: 20px; display:flex; align-items:center;
+    }
+    .Sort__fillter--new{font-size:14px; line-height: 20px; display:flex; align-items:center;
+    }
+    .Sort__fillter--checked{width:20px; height:20px; position:relative; top:0; left:0;
+      .Sort__fillter--checked-svg{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        path{}
+      }
+    }
+    .Sort__viewer{
+      path{}
+    }
+  }
+}
+
+.Dark_Sort{transition: all ease 0.3s; padding:20px 20px 12px; margin-bottom: 8px; display:flex; justify-content:space-between; background-color:$gray222;
+  .Sort__filter{display:flex; color:$graycf;
+    .Sort__fillter--top{font-size:14px; line-height: 20px; display:flex; align-items:center;
+    }
+    .Sort__fillter--new{font-size:14px; line-height: 20px; display:flex; align-items:center;
+    }
+    .Sort__fillter--checked{width:20px; height:20px; position:relative; top:0; left:0;
+      .Sort__fillter--checked-svg{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        path{stroke:$graycf}
+      }
+    }
+  }
+  .Sort__viewer{
+    span{
+      .Sort__filter--view-svg{
+        path{stroke:$graycf}
+      }
+    }
+  }
+};
