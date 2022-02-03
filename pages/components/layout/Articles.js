@@ -8,7 +8,7 @@ import useInfiniteScroll from '../../hooks/useInfiniteScroll'
 
 const Articles = ({isRouter,serContents}) => {
   const [{isDetail}, toggleView] =useContext(PageTypeContext)
-  const [{theme, isDark}, toggleTheme] = useContext(ThemeContext);
+  const [{isDark}, toggleTheme] = useContext(ThemeContext);
 
   const [content, setContent] = useState(serContents)
   
@@ -36,7 +36,7 @@ const Articles = ({isRouter,serContents}) => {
   },[intersecting,content])
 
   return(
-    <div>
+    <div className={`${isDark ? "Dark": "Light"}_Articles`}>
       {isDetail
       ?content.map((item, idx)=>(<PageDetail key={item.id} ms={item} idx={idx+1}/>)) 
       :content.map((item, idx)=>(<PageView key={idx} ms={item} idx={idx+1}/>))

@@ -1,10 +1,13 @@
-import React,{useState} from 'react';
+import React,{useState, useContext} from 'react';
 import Modal from './Modal.js'
 
 import Link from 'next/link'
+import {ThemeContext} from '../../contexts/theme.js'
+
 //import Backdrop from '../shared/Backdrop'
 
 const PageDetail = ({ms: {id,by, title, kids, time, url, descendants, score} , idx}) => {
+  const [{isDark}, toggleTheme] = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false)
 
   const openModal = () => {
@@ -38,18 +41,20 @@ const PageDetail = ({ms: {id,by, title, kids, time, url, descendants, score} , i
 
   // const contentTime = new Date(time*1000).toLocaleString("ko-KR")
   return(
-      <div className="PageDetail">
+      <div className={`${isDark ? "Dark": "Light"}_PageDetail`}>
         <Link href = {`/article/${id}`}>
           <a>
-          <div className="PageDetail__number">
-          <span className='PageDetail__rank'>
-            {idxNum}
-          </span>
-          <span className='PageDetail__time'>
-            {wroteTime()}
-          </span>
-        </div>
-        <h3 className="PageDetail__title">{title}</h3>
+            <div className="PageDetail__number">
+              <span className='PageDetail__rank'>
+                {idxNum}
+              </span>
+              <span className='PageDetail__time'>
+                {wroteTime()}
+              </span>
+            </div>
+            <h3 className="PageDetail__title">
+              {title}
+            </h3>
           </a>
         </Link>
         <div className="PageDetail__info">

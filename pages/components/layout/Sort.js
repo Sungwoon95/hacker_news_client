@@ -1,4 +1,4 @@
-import React,{useState, useContext} from 'react';
+import React,{useState, useContext,useRef} from 'react';
 import Modal from './Modal.js'
 
 import {ThemeContext} from '../../contexts/theme.js'
@@ -8,12 +8,20 @@ import Plus from '../../assets/plus.svg'
 import Minus from '../../assets/minus.svg'
 import Checked from '../../assets/check.svg'
 
+import useFixed from '../../hooks/useFixed'
+
 const Sort = ({isPage}) => {
   const [{isDark}, toggleTheme] =useContext(ThemeContext)
   const [{isDetail}, toggleView] =useContext(PageTypeContext)
   
+  const [isFixed, setIsFixed] = useState(false)
+  const sortFixed = useRef(null)
+  const fixing = useFixed(sortFixed)
+
   return(
-      <div className={`${isDark ? "Dark": "Light"}_Sort`}>
+    <>
+      <div ref ={sortFixed} />
+      <div className={`${isDark ? "Dark": "Light"}_Sort ${fixing ? "UnFixing" : "Fixing"}`}>
         <div className="Sort__filter">
           <div className="Sort__fillter--top">
             <div className="Sort__fillter--checked">
@@ -37,6 +45,7 @@ const Sort = ({isPage}) => {
           </span>
         </div>
       </div>
+      </>
   )
 }
 

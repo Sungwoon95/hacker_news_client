@@ -1,4 +1,4 @@
-import React,{useEffect, useContext} from 'react';
+import React,{useEffect, useContext, useRef, useState} from 'react';
 import axios from 'axios'
 
 import {useRouter} from 'next/router'
@@ -17,6 +17,8 @@ const Nav = () => {
     {path:'/ask', sectionName:'Ask'},
     {path:'/jobs', sectionName:'Jobs'},
   ]
+
+
   return(
     <div className={`${isDark ? "Dark": "Light"}_Nav container`}>
       <ul className={`Nav__list--wrap ${router.asPath === "/" ? "home" : "side"}`}>

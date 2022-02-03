@@ -58,7 +58,7 @@ const Home = () => {
        {toppest.map((item, idx)=>(
            <>
             <SwiperSlide>
-             <CardView key={idx} ms={item} idx={idx+1} />
+             <CardView key={item*0.01} ms={item} idx={idx+1} />
            </SwiperSlide>
            <h2>
              굿
@@ -67,7 +67,7 @@ const Home = () => {
        ))}
      </Swiper>}
      </div>
-    <Sort onClick={toggleView}/>
+    <Sort />
   {!isLoading 
   ? 
   'Load...'

@@ -1,12 +1,10 @@
 import React,{useState,useEffect, useRef, useContext} from 'react'
 import APIfetcher from '../APIfetcher'
-import Sort from './components/layout/Sort'
 import {useRouter} from 'next/router'
-
+import Sort from './components/layout/Sort'
 import Articles from './components/layout/Articles'
 
-const New = ({serContents}) => {  
-
+const Ask = ({serContents}) => {
   const router = useRouter()
 
   return(
@@ -18,10 +16,10 @@ const New = ({serContents}) => {
 }
 
 export const getServerSideProps = async () => {
-  const serContents = await APIfetcher('get', '/new/content/scroll')
+  const serContents = await APIfetcher('get', '/ask/content/scroll')
   return {
     props: {serContents}
   }
 }
 
-export default New;
+export default Ask;
