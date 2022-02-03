@@ -9,7 +9,7 @@ const New = ({serContents}) => {
 
   return(
   <div>
-    <Sort />
+    {/* <Sort /> */}
     <Articles isRouter={router} serContents={serContents}/>
   </div>
   )

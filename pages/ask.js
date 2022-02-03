@@ -9,7 +9,7 @@ const Ask = ({serContents}) => {
 
   return(
   <div>
-    <Sort />
+    {/* <Sort /> */}
     <Articles isRouter={router} serContents={serContents}/>
   </div>
   )
