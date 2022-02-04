@@ -15,7 +15,7 @@ const Nav = () => {
     {path:'/new', sectionName:'Article'},
     {path:'/show', sectionName:'Show'},
     {path:'/ask', sectionName:'Ask'},
-    {path:'/jobs', sectionName:'Jobs'},
+    {path:'/job', sectionName:'Jobs'},
   ]
 
 

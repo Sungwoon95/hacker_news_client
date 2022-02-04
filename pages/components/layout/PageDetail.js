@@ -60,9 +60,6 @@ const PageDetail = ({ms: {id,by, title, kids, time, url, descendants, score} , i
         <div className="PageDetail__info">
           <p onClick={openModal} className="PageDetail__info--user">
             {by}
-            <span class="material-icons">
-              link
-            </span>
           </p>
           <Link href = {`/article/${id}`}>
           <div className="PageDetail__info--option">
