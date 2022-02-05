@@ -29,7 +29,6 @@ const CardView = ({ms: {id,by, title, kids, time, url, descendants, score}, idx}
           </p>
         </div>
         {isOpen && <Modal userName={by} onClick={closeModal}/>}
-        {/* <p>{url}</p> */}
       </div>
   )
 }
