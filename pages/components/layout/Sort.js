@@ -10,18 +10,20 @@ import Checked from '../../assets/check.svg'
 
 import useFixed from '../../hooks/useFixed'
 
-const Sort = ({isPage}) => {
+const Sort = ({isPage, onInverse}) => {
   const [{isDark}, toggleTheme] =useContext(ThemeContext)
   const [{isDetail}, toggleView] =useContext(PageTypeContext)
   
   const [isFixed, setIsFixed] = useState(false)
   const sortFixed = useRef(null)
   const fixing = useFixed(sortFixed)
+  
+  onInverse(!fixing)
 
   return(
     <>
       <div ref ={sortFixed} />
-      <div className={`${isDark ? "Dark": "Light"}_Sort ${fixing ? "UnFixing" : "Fixing"}`}>
+      <div className={`${isDark ? "Dark": "Light"}_Sort ${!fixing ? "Fixing" : "UnFixing"}`}>
         <div className="Sort__filter">
           <div className="Sort__fillter--top">
             <div className="Sort__fillter--checked">

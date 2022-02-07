@@ -6,7 +6,7 @@ import PageView from './PageView'
 import APIfetcher from '../../../APIfetcher'
 import useInfiniteScroll from '../../hooks/useInfiniteScroll'
 
-const Articles = ({isRouter,serContents}) => {
+const Articles = ({isRouter,serContents, inverse}) => {
   const [{isDetail}, toggleView] =useContext(PageTypeContext)
   const [{isDark}, toggleTheme] = useContext(ThemeContext);
 
@@ -36,7 +36,7 @@ const Articles = ({isRouter,serContents}) => {
   },[intersecting,content])
 
   return(
-    <div className={`${isDark ? "Dark": "Light"}_Articles`}>
+    <div className={`${isDark ? "Dark": "Light"}_Articles ${inverse ? "Padding" : "NonPadding"}`}>
       {isDetail
       ?content.map((item, idx)=>(<PageDetail key={item.id} ms={item} idx={idx+1}/>)) 
       :content.map((item, idx)=>(<PageView key={idx} ms={item} idx={idx+1}/>))

@@ -5,12 +5,17 @@ import Sort from './components/layout/Sort'
 import Articles from './components/layout/Articles'
 
 const Ask = ({serContents}) => {
+  const [inverse, setInverse] = useState(true)
   const router = useRouter()
+  
+  const onInverse = (inv) => {
+    setInverse(inv)
+  }
 
   return(
   <div>
-    {/* <Sort /> */}
-    <Articles isRouter={router} serContents={serContents}/>
+    <Sort onInverse={onInverse}/>
+    <Articles isRouter={router} serContents={serContents} inverse={inverse}/>
   </div>
   )
 }

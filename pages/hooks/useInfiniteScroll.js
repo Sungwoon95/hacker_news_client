@@ -2,13 +2,11 @@ import {useState, useEffect, useRef, useCallback} from 'react'
 
 const useInfiniteScroll = target => {
   const observerRef = useRef(null)
-  const [intersecting, setIntersecting]= useState(false)
+  const [intersecting, setIntersecting]= useState(true)
  const getObserver = useCallback(()=>{
    if (!observerRef.current){
     observerRef.current = new IntersectionObserver(
-      entries => setIntersecting(
-        entries.some(entry => entry.isIntersecting)
-    ))
+      entries => console.log(entries))
    }
    return observerRef.current
  },[observerRef.current])
