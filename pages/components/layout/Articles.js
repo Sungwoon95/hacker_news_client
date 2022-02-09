@@ -36,7 +36,7 @@ const Articles = ({isRouter,serContents, inverse}) => {
   },[intersecting,content])
 
   return(
-    <div className={`${isDark ? "Dark": "Light"}_Articles ${inverse ? "Padding" : "NonPadding"}`}>
+    <div className={`${isDark ? "Dark": "Light"}_Articles`}>
       {isDetail
       ?content.map((item, idx)=>(<PageDetail key={item.id} ms={item} idx={idx+1}/>)) 
       :content.map((item, idx)=>(<PageView key={idx} ms={item} idx={idx+1}/>))

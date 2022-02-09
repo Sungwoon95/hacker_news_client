@@ -50,7 +50,7 @@ const Home = () => {
   {
     getToppest()
   },[toppest])
-  return(<div className={`${isDark ? "Dark": "Light"}_Home`}>
+  return(<div className={`${isDark ? "Dark": "Light"} content__wrap`}>
     <h2 className='container Home__rank'>Total<br/> Ranking 5 Now</h2>
   <div className='CardView__wrap'>
   {<Swiper modules={[Pagination]}

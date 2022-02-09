@@ -8,8 +8,8 @@ const New = ({serContents}) => {
   const router = useRouter()
 
   return(
-  <div>
-    {/* <Sort /> */}
+  <div className="content__wrap">
+    <Sort />
     <Articles isRouter={router} serContents={serContents}/>
   </div>
   )

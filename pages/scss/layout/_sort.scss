@@ -1,4 +1,4 @@
-.Light_Sort{transition: all ease 0.3s; padding:20px 20px 12px;display:flex; justify-content:space-between;
+.Light_Sort{transition: all ease 0.3s; padding:20px 20px 12px;display:flex; justify-content:space-between; background-color: $white;
   .Sort__filter{display:flex; color:$gray;
     .Sort__fillter--top{font-size:14px; line-height: 20px; display:flex; align-items:center;
     }
@@ -37,4 +37,4 @@
 };
 
 .Fixing{position:fixed; top:0; left:0; width:100%;box-sizing:border-box; transition:all ease 0.3s; z-index:50;}
-.UnFixing{transition:all ease 0.3s}
+.UnFixing{transition:all ease 0.3s; position:absolute; top:0; left:0; width:100%; box-sizing:border-box;}

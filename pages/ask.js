@@ -13,9 +13,9 @@ const Ask = ({serContents}) => {
   }
 
   return(
-  <div>
-    <Sort onInverse={onInverse}/>
-    <Articles isRouter={router} serContents={serContents} inverse={inverse}/>
+  <div className="content__wrap">
+    <Sort />
+    <Articles isRouter={router} serContents={serContents} />
   </div>
   )
 }

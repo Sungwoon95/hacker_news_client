@@ -31,9 +31,9 @@ const UserInfo = () => {
 
   return (
     <div>
-      {article.by}
-      {article.descendants}
-      {article.title}
+      <p>{article.by}</p>
+      <p>{article.descendants}</p>
+      <p>{article.title}</p>
       {/* {article.text} */}
       {comment.map((item,idx)=>(
         <Comment key={idx} data={item}/>

@@ -10,7 +10,7 @@ import Checked from '../../assets/check.svg'
 
 import useFixed from '../../hooks/useFixed'
 
-const Sort = ({isPage, onInverse}) => {
+const Sort = ({isPage}) => {
   const [{isDark}, toggleTheme] =useContext(ThemeContext)
   const [{isDetail}, toggleView] =useContext(PageTypeContext)
   
@@ -18,8 +18,6 @@ const Sort = ({isPage, onInverse}) => {
   const sortFixed = useRef(null)
   const fixing = useFixed(sortFixed)
   
-  onInverse(!fixing)
-
   return(
     <>
       <div ref ={sortFixed} />

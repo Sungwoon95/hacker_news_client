@@ -8,7 +8,7 @@ const Show = ({serContents}) => {
   const router = useRouter()
 
   return(
-    <div>
+    <div className="content__wrap">
       <Sort />
       <Articles isRouter={router} serContents={serContents}/>
     </div>
