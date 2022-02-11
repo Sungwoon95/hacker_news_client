@@ -18,7 +18,7 @@ const UserInfo = () => {
   }
 
   const getComment = async() => {
-    const comments = await APIfetcher('get',`/comment/${userId}`
+    const comments = await APIfetcher('get',`/commentReply/${userId}`
     //,{params:{userId}}
     )
     setComment(comments)
@@ -31,9 +31,9 @@ const UserInfo = () => {
 
   return (
     <div>
-      <p>{article.by}</p>
-      <p>{article.descendants}</p>
-      <p>{article.title}</p>
+      <p className="container">{article.by}</p>
+      <p className="container">{article.descendants}</p>
+      <p className="container">{article.title}</p>
       {/* {article.text} */}
       {comment.map((item,idx)=>(
         <Comment key={idx} data={item}/>

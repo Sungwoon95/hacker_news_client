@@ -4,7 +4,7 @@ import APIfetcher from '../../../APIfetcher'
 import {ThemeContext} from '../../contexts/theme.js'
 
 
-const Comment = ({data:{id,by,text,time}}) => {
+const Comment = ({data:{id,by,text,time,user,indent}}) => {
   const [{isDark}, toggleTheme] =useContext(ThemeContext)
   //const [article, setArticle] =({})
   //const [comment, setComment] =({})
@@ -48,13 +48,13 @@ const Comment = ({data:{id,by,text,time}}) => {
 
 
   return(
-    <div className={`${isDark? 'Dark': 'Light'}_Comment`}>
+    <div className={`${isDark? 'Dark': 'Light'}_Comment ${indent}`}  style={{paddingLeft: `${20+(indent*12)}px`}}>
       <div className='Comment__top'>
         <div className='Comment__user'>
-          {by}
+          {user}
         </div>
         <div className='Comment__time'>
-          {wroteTime()}
+          {time}
         </div>
       </div>
       <div className='Comment__text'>
