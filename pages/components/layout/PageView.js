@@ -27,10 +27,6 @@ const PageView = ({ms: {id,by, title, kids, time, url, descendants, score}, idx}
             <p className="PageView__info--option-score">{score}</p>
           </div>
         </div>
-        
-        
-        
-        {/* <p>{url}</p> */}
       </div>
   )
 }
