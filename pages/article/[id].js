@@ -11,16 +11,12 @@ const UserInfo = () => {
   const userId= router.query.id
 
   const getArticle = async() => {
-   const articlePage = await APIfetcher('get',`/article/${userId}`
-   //,{params:{userId}}
-   )
+   const articlePage = await APIfetcher('get',`/article/${userId}`)
    setArticle(articlePage)
   }
 
   const getComment = async() => {
-    const comments = await APIfetcher('get',`/commentReply/${userId}`
-    //,{params:{userId}}
-    )
+    const comments = await APIfetcher('get',`/commentReply/${userId}`)
     setComment(comments)
    }
 
