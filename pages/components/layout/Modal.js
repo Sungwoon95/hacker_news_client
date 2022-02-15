@@ -102,9 +102,7 @@ const Modal = ({userName, onClick}) => {
             </p>
           </div>
           <div className='UserModal__more--option--right'>
-            <span className='material-icons'>
-              navigate_next
-            </span>
+            
           </div>
         </div>
       </div>
