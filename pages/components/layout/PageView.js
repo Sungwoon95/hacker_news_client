@@ -17,9 +17,6 @@ const PageView = ({ms: {id,by, title, kids, time, url, descendants, score}, idx}
         <Link href = {`/user/${by}`}>
           <p className="PageView__info--user">
             {by}
-            <span class="material-icons">
-              navigate_next
-            </span>
           </p>
           </Link>
           <div className="PageView__info--option">
